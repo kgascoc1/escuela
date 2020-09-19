@@ -1,0 +1,16 @@
+com\everis\escuela\dto\SaveStockResponseDto.class
+com\everis\escuela\dto\StockDto.class
+com\everis\escuela\entity\Stock.class
+com\everis\escuela\exception\BusinessException.class
+com\everis\escuela\service\StockService.class
+com\everis\escuela\controller\StockController.class
+com\everis\escuela\mapper\StockMapperImpl.class
+com\everis\escuela\controller\advice\GlobalHandlerControllerAdvice.class
+com\everis\escuela\dto\ErrorDetailDto.class
+com\everis\escuela\repository\StockRepository.class
+com\everis\escuela\exception\ResourceNotFoundException.class
+com\everis\escuela\service\impl\StockServiceImpl.class
+com\everis\escuela\dto\FindByProductIdDto.class
+com\everis\escuela\mapper\StockMapper.class
+com\everis\escuela\StockMsApplication.class
+com\everis\escuela\dto\SaveStockRequestDto.class

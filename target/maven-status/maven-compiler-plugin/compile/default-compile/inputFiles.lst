@@ -1,0 +1,15 @@
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\dto\FindByProductIdDto.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\exception\ResourceNotFoundException.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\mapper\StockMapper.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\dto\ErrorDetailDto.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\dto\SaveStockResponseDto.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\exception\BusinessException.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\repository\StockRepository.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\controller\advice\GlobalHandlerControllerAdvice.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\service\StockService.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\StockMsApplication.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\controller\StockController.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\dto\StockDto.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\service\impl\StockServiceImpl.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\entity\Stock.java
+C:\Users\kerwi\Documents\Microservice\stock-ms\src\main\java\com\everis\escuela\dto\SaveStockRequestDto.java
