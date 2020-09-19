@@ -1,5 +1,4 @@
 com\everis\escuela\dto\SaveStockResponseDto.class
-com\everis\escuela\dto\StockDto.class
 com\everis\escuela\entity\Stock.class
 com\everis\escuela\exception\BusinessException.class
 com\everis\escuela\service\StockService.class

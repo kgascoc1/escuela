@@ -1,1 +1,4 @@
-com\everis\stockms\StockMsApplicationTests.class
+com\everis\controller\advice\TestGlobalHandlerControllerAdviceShould.class
+com\everis\controller\TestStockControllerShould.class
+com\everis\StockMsApplicationTests.class
+com\everis\service\TestStockServiceImplShould.class

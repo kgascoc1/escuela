@@ -9,40 +9,29 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-09-19T04:23:22-0500",
+    date = "2020-09-19T09:38:27-0500",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_261 (Oracle Corporation)"
 )
 public class StockMapperImpl implements StockMapper {
 
     @Override
-    public List<Stock> toEntity(List<SaveStockRequestDto> saveStockRequestDtos) {
-        if ( saveStockRequestDtos == null ) {
+    public SaveStockResponseDto map(Stock stock) {
+        if ( stock == null ) {
             return null;
         }
 
-        List<Stock> list = new ArrayList<Stock>( saveStockRequestDtos.size() );
-        for ( SaveStockRequestDto saveStockRequestDto : saveStockRequestDtos ) {
-            list.add( saveStockRequestDtoToStock( saveStockRequestDto ) );
-        }
+        SaveStockResponseDto saveStockResponseDto = new SaveStockResponseDto();
 
-        return list;
+        saveStockResponseDto.setId( stock.getId() );
+        saveStockResponseDto.setProductId( stock.getProductId() );
+        saveStockResponseDto.setWareHouseId( stock.getWareHouseId() );
+        saveStockResponseDto.setQuantity( stock.getQuantity() );
+
+        return saveStockResponseDto;
     }
 
     @Override
-    public List<SaveStockResponseDto> toSaveStockResponseDto(List<Stock> stocks) {
-        if ( stocks == null ) {
-            return null;
-        }
-
-        List<SaveStockResponseDto> list = new ArrayList<SaveStockResponseDto>( stocks.size() );
-        for ( Stock stock : stocks ) {
-            list.add( stockToSaveStockResponseDto( stock ) );
-        }
-
-        return list;
-    }
-
-    protected Stock saveStockRequestDtoToStock(SaveStockRequestDto saveStockRequestDto) {
+    public Stock map(SaveStockRequestDto saveStockRequestDto) {
         if ( saveStockRequestDto == null ) {
             return null;
         }
@@ -56,18 +45,31 @@ public class StockMapperImpl implements StockMapper {
         return stock;
     }
 
-    protected SaveStockResponseDto stockToSaveStockResponseDto(Stock stock) {
-        if ( stock == null ) {
+    @Override
+    public List<Stock> toEntity(List<SaveStockRequestDto> saveStockRequestDtos) {
+        if ( saveStockRequestDtos == null ) {
             return null;
         }
 
-        SaveStockResponseDto saveStockResponseDto = new SaveStockResponseDto();
+        List<Stock> list = new ArrayList<Stock>( saveStockRequestDtos.size() );
+        for ( SaveStockRequestDto saveStockRequestDto : saveStockRequestDtos ) {
+            list.add( map( saveStockRequestDto ) );
+        }
 
-        saveStockResponseDto.setId( stock.getId() );
-        saveStockResponseDto.setProductId( stock.getProductId() );
-        saveStockResponseDto.setWareHouseId( stock.getWareHouseId() );
-        saveStockResponseDto.setQuantity( stock.getQuantity() );
+        return list;
+    }
 
-        return saveStockResponseDto;
+    @Override
+    public List<SaveStockResponseDto> toSaveStockResponseDto(List<Stock> stocks) {
+        if ( stocks == null ) {
+            return null;
+        }
+
+        List<SaveStockResponseDto> list = new ArrayList<SaveStockResponseDto>( stocks.size() );
+        for ( Stock stock : stocks ) {
+            list.add( map( stock ) );
+        }
+
+        return list;
     }
 }
