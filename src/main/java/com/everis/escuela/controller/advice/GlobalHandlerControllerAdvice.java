@@ -5,8 +5,10 @@ import com.everis.escuela.exception.BusinessException;
 import com.everis.escuela.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+@ControllerAdvice
 public class GlobalHandlerControllerAdvice {
 
     @ExceptionHandler(ResourceNotFoundException.class)
@@ -16,6 +18,6 @@ public class GlobalHandlerControllerAdvice {
 
     @ExceptionHandler(BusinessException.class)
     public ResponseEntity<ErrorDetailDto> businessException(BusinessException exception){
-        return new ResponseEntity<>(new ErrorDetailDto(exception.getMessage(),exception.getDate()),HttpStatus.CREATED);
+        return new ResponseEntity<>(new ErrorDetailDto(exception.getMessage(),exception.getDate()),HttpStatus.OK);
     }
 }
